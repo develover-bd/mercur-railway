@@ -1,0 +1,16 @@
+ services:
+  - type: web
+    name: mercur-backend
+    env: node
+    plan: free
+    repo: https://github.com/develover-bd/mercur-railway
+    branch: master
+    buildCommand: yarn build
+    startCommand: yarn start
+    rootDir: .
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://postgres:MercurBaidda123@db.yynrlczcqttaqhopodqd.supabase.co:5432/postgres
+      - key: NODE_ENV
+        value: production
+ 
